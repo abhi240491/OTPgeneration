@@ -14,7 +14,6 @@ const sns = new AWS.SNS({creds, region:'us-east-1'})
 //routes
 app.get('/status',(req,res)=> res.send({status:'ok',sns}))
 
-/*subscribe multiple contacts to send message to multiple users failed using arn for me.*/
 app.post('/subscribe',(req,res)=>{
     const params = {
         Protocol: 'sms',
